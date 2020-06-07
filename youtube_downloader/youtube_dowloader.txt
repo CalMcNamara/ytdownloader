@@ -1,0 +1,31 @@
+The goal of this application is to be able to automatically copy a link from youtube and have the program 
+download all of the links that were collected. 
+ 
+Requirments : pyperclip, pyautogui , youtube_dl 
+
+To do : Create a verification for the links to ensure that the link is actually valid. 
+Create a "Dowload File" to store all the downoloaded files.
+
+Issues / Resolved Issues.
+
+Resolved Issues : 
+{
+    var = copy_clipboard()
+    while True:
+    try:
+        if(keyboard.is_pressed('e')):
+            while True:
+                    
+                    try:
+                        if(keyboard.is_pressed('ctrl+c')):                                
+                            list_of_links.append(var)
+                            print('Pressed Ctrl + C')
+                            break  
+}
+
+The goal of this segment of code was to be able to contiously copy the links. However, the issue that I was facing 
+was that it would only copy one link and would contiously add that one link for the .append. What I found was that during
+the var = copy_clipboard() it was calling the function that one time at the start of the application and would not recall it
+Solution.
+I created a function that stored the var assignment and the .append I then called this function every time I needed to
+add a link to the list. 
